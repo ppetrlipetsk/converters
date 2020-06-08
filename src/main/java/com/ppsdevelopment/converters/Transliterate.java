@@ -50,8 +50,8 @@ public class Transliterate {
         StringBuilder dest = new StringBuilder(text.length());
         for(int i = 0, n = text.length() ; i < n ; i++) {
             char c = text.charAt(i);
-            if (charCodeCirLat.containsKey(c)) {
-                dest.append(charCodeCirLat.get(c));
+            if (charCodeCirLat.containsKey(String.valueOf(c))) {
+                dest.append(charCodeCirLat.get(String.valueOf(c)));
             }
             else {
                 dest.append(c);

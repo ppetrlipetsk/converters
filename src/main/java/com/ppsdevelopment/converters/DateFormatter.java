@@ -9,7 +9,7 @@ import java.util.Date;
  * Класс предоставляет статический метод преобразования строки даты в формате "dd.mm.yyyy" в строку формата "yyyy-mm-dd"
  */
 public class DateFormatter {
-    private static final String[] splitters=new String[]{"/",".","\\"};// SPLITTER_DOT =".";
+    private static final String[] splitters=new String[]{"/",".","\\"};;
     private static final String SPLITTER_HYPHEN ="-";
     private static final String DATE_FORMAT_FROM ="dd-MM-yyyy";
     private static final String DATE_FORMAT_TO ="yyyy-MM-dd";
@@ -19,7 +19,7 @@ public class DateFormatter {
      * @param fdate строка даты в формате "dd-mm-yyyy" или "dd.mm.yyyy" или "dd/mm/yyyy"
      * @param formatFrom- исходный формат даты. Если null, то принимается формат "dd-MM-yyyy"
      * @param formatTo - заданный формат даты. Если null, то принимается формат "yyyy-MM-dd"
-     * @param delimiter - разделитель. Если null, то принимается "-".
+     * @param delimiter - разделитель, соответствующий исходному формату. Если null, то принимается "-".
      * @return строка даты в заданном формате
      * @throws ParseException
      */
@@ -28,9 +28,8 @@ public class DateFormatter {
         if (formatTo==null) formatTo= DATE_FORMAT_TO;
         if (delimiter==null) delimiter=SPLITTER_HYPHEN;
         for (int i=0;i<splitters.length;i++){
-            fdate.replace(splitters[i],delimiter);
+            fdate=fdate.replace(splitters[i],delimiter);
         }
-
         DateFormat df=new SimpleDateFormat(formatTo);
         String s=null;
         try {
