@@ -6,7 +6,7 @@
 
     <groupId>pps.development</groupId>
     <artifactId>pps.development.converters</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <properties>
         <maven.compiler.release>8</maven.compiler.release>
         <github.global.server>github</github.global.server>
@@ -100,7 +100,7 @@
                     <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
                     <branch>refs/heads/mvn-repo</branch>
                     <includes><include>**/*</include></includes>
-                    <repositoryName>converters</repositoryName>
+                    <repositoryName>library</repositoryName>
                     <repositoryOwner>ppetrlipetsk</repositoryOwner>
 
                 </configuration>
