@@ -4,8 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+<<<<<<< HEAD
     <groupId>com.ppsdevelopment</groupId>
     <artifactId>com.ppsdevelopment.converters</artifactId>
+=======
+    <groupId>pps.development</groupId>
+    <artifactId>pps.development.converters</artifactId>
+>>>>>>> 2213289fb4da145fbfd0eb8407ee682805c54e2c
     <version>1.0.0</version>
     <properties>
         <maven.compiler.release>8</maven.compiler.release>
