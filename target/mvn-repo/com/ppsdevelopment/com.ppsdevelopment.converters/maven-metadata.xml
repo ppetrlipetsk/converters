@@ -3,10 +3,10 @@
   <groupId>com.ppsdevelopment</groupId>
   <artifactId>com.ppsdevelopment.converters</artifactId>
   <versioning>
-    <release>1.0.0</release>
     <versions>
-      <version>1.0.0</version>
+      <version>1.0.1-SNAPSHOT</version>
+      <version>1.0.3-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20200609095505</lastUpdated>
+    <lastUpdated>20201130080740</lastUpdated>
   </versioning>
 </metadata>
