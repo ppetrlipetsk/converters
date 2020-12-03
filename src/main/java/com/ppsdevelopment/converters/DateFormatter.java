@@ -41,4 +41,27 @@ public class DateFormatter {
         }
         return s;
     }
+
+    /**
+     * Дополняет строку даты нулями и числом столетия.
+     * @param value- строка даты
+     * @return строка даты формата dd/mm/yyyy
+     * @throws Exception
+     */
+    public String normDateStr(String value) throws Exception {
+        String[] splitter={".","/","-"};
+        String[] d = null;//new String[];// value.split("/");
+        int i=0;
+        while((d==null||d.length==0)&&(i<splitter.length)){
+            d=value.split(splitter[i]);
+        }
+
+        if (d.length == 3) {
+            if (d[0].length() == 1) d[0] = "0" + d[0];
+            if (d[1].length() == 1) d[1] = "0" + d[1];
+            if (d[2].length() == 2) d[2] = "20" + d[2];
+            return d[1] + "." + d[0] + "." + d[2];
+        } else
+            throw new Exception("Неверный формат строки даты! Строка даты:"+value);
+    }
 }
